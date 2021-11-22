@@ -2,6 +2,8 @@ import React from 'react';
 import Joi from 'joi-browser';
 import Form from './common/form';
 import { getGenders } from '../services/fakeGenderService';
+import auth from '../services/authService';
+import userService from '../services/userService';
 
 class RegisterForm extends Form {
 	state = {
@@ -21,9 +23,18 @@ class RegisterForm extends Form {
 		gender: Joi.string().required().label('Gender')
 	};
 
-	doSubmit = () => {
-		// Call the server
-		console.log('Submitted');
+	doSubmit = async () => {
+		try {
+			const response = await userService.register(this.state.data);
+			auth.loginWithJwt(response.headers['x-auth-token']);
+			this.props.history.push('/');
+		} catch (ex) {
+			if (ex.response && ex.response.status === 400) {
+				const errors = { ...this.state.errors };
+				errors.indexNumber = ex.response.data;
+				this.setState({ errors });
+			}
+		}
 	};
 
 	render() {
