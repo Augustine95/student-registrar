@@ -38,6 +38,14 @@ class Schools extends Component {
 
 	handleSearch = (query) => this.setState({ querySearch: query });
 
+	handleStar = (school) => {
+		const schools = [ ...this.state.schools ];
+		const index = schools.indexOf(school);
+		schools[index] = { ...school };
+		schools[index].starred = !schools[index].starred;
+		this.setState({ schools });
+	};
+
 	getPagedData() {
 		const { currentPage, pageSize, schools: allSchools, sortColumn, querySearch } = this.state;
 
@@ -64,6 +72,7 @@ class Schools extends Component {
 					onSort={this.handleSort}
 					sortColumn={sortColumn}
 					schools={schools}
+					onStar={this.handleStar}
 				/>
 				<Pagination
 					currentPage={currentPage}
