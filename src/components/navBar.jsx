@@ -5,7 +5,7 @@ const NavBar = ({ user }) => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<Link className="navbar-brand" to="/">
-				Registrar
+				Registrar <i class="fa fa-graduation-cap" aria-hidden="true" />
 			</Link>
 			<button
 				className="navbar-toggler"
@@ -21,30 +21,30 @@ const NavBar = ({ user }) => {
 			<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div className="navbar-nav">
 					<NavLink className="nav-item nav-link" to="/home">
-						Home
+						Home <i class="fa fa-home" aria-hidden="true" />
 					</NavLink>
 					{user && (
-						<div>
+						<React.Fragment>
 							<NavLink className="nav-item nav-link" to="/students/:id">
-								Scores
+								Scores <i class="fa fa-id-card" aria-hidden="true" />
 							</NavLink>
 							<NavLink className="nav-item nav-link" to="/schools">
-								Schools
+								Schools <i class="fa fa-university" aria-hidden="true" />
 							</NavLink>
 							<NavLink className="nav-item nav-link" to="/profile">
-								{user.name}
+								<i class="fa fa-user" aria-hidden="true" /> {user.name}
 							</NavLink>
-						</div>
+						</React.Fragment>
 					)}
 					{!user && (
-						<div>
+						<React.Fragment>
 							<NavLink className="nav-item nav-link" to="/login">
-								Login
+								Login <i class="fa fa-toggle-on" aria-hidden="true" />
 							</NavLink>
 							<NavLink className="nav-item nav-link" to="/register">
-								Register
+								Register <i class="fa fa-users" aria-hidden="true" />
 							</NavLink>
-						</div>
+						</React.Fragment>
 					)}
 				</div>
 			</div>
