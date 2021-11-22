@@ -21,7 +21,7 @@ class LoginForm extends Form {
 			await auth.login(data.indexNumber, data.password);
 			window.location = '/';
 		} catch (ex) {
-			if (ex.response && ex.response.status === 404) {
+			if (ex.response && ex.response.status === 400) {
 				const errors = { ...this.state.errors };
 				errors.indexNumber = ex.response.data;
 				this.setState({ errors });
