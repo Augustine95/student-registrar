@@ -7,13 +7,20 @@ import RegisterForm from './components/registerForm';
 import Schools from './components/schools';
 import HomePage from './components/homePage';
 import InputScores from './components/inputScores';
+import auth from './services/authService';
 import './App.css';
 
 class App extends Component {
+	state = {};
+
+	componentDidMount() {
+		this.setState({ user: auth.getCurrentUser() });
+	}
+
 	render() {
 		return (
 			<React.Fragment>
-				<NavBar />
+				<NavBar user={this.state.user} />
 				<main className="container">
 					<Switch>
 						<Route path="/register" component={RegisterForm} />

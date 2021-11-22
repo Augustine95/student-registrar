@@ -3,7 +3,7 @@ import Joi from 'joi-browser';
 import Form from './common/form';
 import { getGenders } from '../services/fakeGenderService';
 import auth from '../services/authService';
-import userService from '../services/userService';
+import * as userService from '../services/userService';
 
 class RegisterForm extends Form {
 	state = {
