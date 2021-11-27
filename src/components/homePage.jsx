@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import image1 from './images/me1.png';
-import me2 from './images/me2.jpg';
+import me1 from './images/me1.png';
+import image1 from './images/image1.jpeg';
 
 export default class HomePage extends Component {
 	render() {
@@ -19,14 +19,14 @@ export default class HomePage extends Component {
 				<h2>What others have to say.</h2>
 				<section className="recommendations">
 					<article>
-						<img src={image1} alt="An image of Augustine" />
+						<img src={me1} alt="An image of Augustine" />
 						<p className="tweet-handle">@awuoriaugustine</p>
 						<p className="tweet-content">
 							Student Selection Allocation application has helped me connect to the school of my dream
 						</p>
 					</article>
 					<article>
-						<img src={me2} alt="An image of tweeter lover" />
+						<img src={image1} alt="An image of tweeter lover" />
 						<p className="tweet-handle">@tweeterlover</p>
 						<p className="tweet-content">I've never met any better site that allocates better schools.</p>
 					</article>
