@@ -11,6 +11,7 @@ import Profile from './components/profile';
 import auth from './services/authService';
 import { getSchools } from './services/fakeSchoolsService';
 import './App.css';
+import Logout from './components/logout';
 
 class App extends Component {
 	state = {
@@ -59,6 +60,7 @@ class App extends Component {
 							)}
 						/>
 						<Route path="/register" component={RegisterForm} />
+						<Route path="/logout" component={Logout} />
 						<Route path="/login" component={LoginForm} />
 						<Route path="/home" component={HomePage} />
 						<Route path="/students/:id" component={InputScores} />
