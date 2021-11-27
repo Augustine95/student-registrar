@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import audio from '../audios/audio.mp3';
 import image1 from './images/me1.png';
 import me2 from './images/me2.jpg';
 
@@ -10,8 +9,8 @@ export default class HomePage extends Component {
 				<h1>Student School Allocation</h1>
 				<h2>Introduction</h2>
 				<p>
-					We'll help you to get school of your dream. We'll give you a notification of the school you have
-					been chosen basing on what you selected.
+					We are here to help you to get school of your dream. We'll give you a notification of the school you
+					have been chosen basing on what you selected.
 				</p>
 				<p>
 					The process is completely free. <a href="/login">Login</a> or <a href="/register">Register</a> with

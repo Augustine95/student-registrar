@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Star from './common/star';
 import Table from './common/table';
-
+import auth from '../services/authService';
 export default class SchoolsTable extends Component {
+	state = {};
+
 	componentDidMount() {
 		this.renderDeleteButton();
+		this.setState({ user: auth.getCurrentUser() });
 	}
 
 	columns = [
@@ -26,7 +29,7 @@ export default class SchoolsTable extends Component {
 	};
 
 	renderDeleteButton = () => {
-		const { user } = this.props;
+		const { user } = this.state;
 		if (user && user.isAdmin) this.columns.push(this.deleteButton);
 	};
 

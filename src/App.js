@@ -8,21 +8,18 @@ import Schools from './components/schools';
 import HomePage from './components/homePage';
 import InputScores from './components/inputScores';
 import Profile from './components/profile';
-import auth from './services/authService';
+import Logout from './components/logout';
 import { getSchools } from './services/fakeSchoolsService';
 import './App.css';
-import Logout from './components/logout';
 
 class App extends Component {
 	state = {
-		user: '',
 		schools: [],
 		sortColumn: { path: 'title', order: 'asc' }
 	};
 
 	componentDidMount() {
-		const schools = [ ...getSchools() ];
-		this.setState({ user: auth.getCurrentUser(), schools });
+		this.setState({ schools: getSchools() });
 	}
 
 	handleStarClick = (school) => {
@@ -41,20 +38,22 @@ class App extends Component {
 	handleSort = (sortColumn) => this.setState({ sortColumn });
 
 	render() {
+		const { schools, sortColumn } = this.state;
+
 		return (
 			<React.Fragment className="App">
-				<NavBar user={this.state.user} />
+				<NavBar />
 				<main className="container">
 					<Switch>
 						<Route
 							path="/profile"
 							render={(props) => (
 								<Profile
-									schools={this.state.schools.filter((s) => s.starred)}
+									schools={schools.filter((s) => s.starred)}
 									onDelete={this.handleDelete}
 									onSort={this.handleSort}
 									onStarClick={this.handleStarClick}
-									sortColumn={this.state.sortColumn}
+									sortColumn={sortColumn}
 									{...props}
 								/>
 							)}
@@ -68,12 +67,11 @@ class App extends Component {
 							path="/schools"
 							render={(props) => (
 								<Schools
-									schools={this.state.schools}
+									schools={schools}
 									onDelete={this.handleDelete}
 									onSort={this.handleSort}
 									onStarClick={this.handleStarClick}
-									sortColumn={this.state.sortColumn}
-									user={this.state.user}
+									sortColumn={sortColumn}
 									{...props}
 								/>
 							)}
