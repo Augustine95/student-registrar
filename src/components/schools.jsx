@@ -40,7 +40,7 @@ class Schools extends Component {
 
 		const { filtered, schools } = this.getPagedData();
 
-		if (this.props.schools.length == 0) return <p>There are no movies in the database.</p>;
+		if (this.props.schools.length === 0) return <p>There are no movies in the database.</p>;
 		return (
 			<div>
 				<h1>Offered Schools</h1>

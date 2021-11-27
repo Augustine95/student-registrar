@@ -10,9 +10,9 @@ import InputScores from './components/inputScores';
 import Profile from './components/profile';
 import Logout from './components/logout';
 import { getSchools } from './services/fakeSchoolsService';
+import ProtectedRoute from './components/common/protectedRoute';
 import auth from './services/authService';
 import './App.css';
-import ProtectedRoute from './components/common/protectedRoute';
 
 class App extends Component {
 	state = {
@@ -35,7 +35,7 @@ class App extends Component {
 	};
 
 	handleDelete = (school) => {
-		const schools = this.state.schools.filter((s) => s._id != school._id);
+		const schools = this.state.schools.filter((s) => s._id !== school._id);
 		this.setState({ schools });
 	};
 

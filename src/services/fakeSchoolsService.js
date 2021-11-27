@@ -1,5 +1,3 @@
-import * as genresAPI from './fakeGenreService';
-
 const schools = [
 	{
 		_id: '5b21ca3eeb7f6fbccd471815',

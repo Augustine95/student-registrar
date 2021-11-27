@@ -6,7 +6,7 @@ class NavBar extends React.Component {
 		const { user } = this.props;
 
 		return (
-			<React.Fragment className="navbar-container">
+			<div className="navbar-container">
 				<nav className="navbar navbar-expand-lg navbar-light bg-light">
 					<Link className="navbar-brand" to="/">
 						<i className="fa fa-graduation-cap" aria-hidden="true" /> Selection
@@ -53,7 +53,7 @@ class NavBar extends React.Component {
 						</div>
 					</div>
 				</nav>
-			</React.Fragment>
+			</div>
 		);
 	}
 }

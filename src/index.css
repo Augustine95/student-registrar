@@ -9,9 +9,19 @@ body {
 	font-size: 62.5%;
 }
 
+p {
+	font-size: 1.8rem;
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	margin-top: 3.5rem;
+}
+
 .navbar-container {
 	display: flex;
 	position: relative;
+	margin-bottom: 2rem;
 }
 
 .navbar {
@@ -38,7 +48,6 @@ body {
 }
 
 .login {
-	font-size: 1.8rem;
 	color: #222;
 	line-height: 1.5;
 }
@@ -58,7 +67,7 @@ body {
 .login h1 {
 	text-align: center;
 	font-size: 3.5rem;
-	margin-top: 1rem;
+	/* margin-top: 1rem; */
 }
 
 .login h2 {
@@ -120,6 +129,12 @@ section {
 .recommendations .tweet-handle:hover {
 	color: dodgerblue;
 	cursor: pointer;
+}
+
+.stress {
+	font-weight: bold;
+	text-align: center;
+	margin: 1.5rem 0 2rem;
 }
 
 ol li {
