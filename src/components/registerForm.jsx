@@ -7,7 +7,7 @@ import * as userService from '../services/userService';
 
 class RegisterForm extends Form {
 	state = {
-		data: { indexNumber: '', password: '', name: '', gender: '' },
+		data: { username: '', password: '', name: '', gender: '' },
 		genders: [],
 		errors: {}
 	};
@@ -17,7 +17,7 @@ class RegisterForm extends Form {
 	}
 
 	schema = {
-		indexNumber: Joi.string().required().label('Index'),
+		username: Joi.string().required().label('Username'),
 		password: Joi.string().required().min(5).label('Password'),
 		name: Joi.string().required().label('Name'),
 		gender: Joi.string().required().label('Gender')
@@ -42,7 +42,7 @@ class RegisterForm extends Form {
 			<div>
 				<h1>Register</h1>
 				<form onSubmit={this.handleSubmit}>
-					{this.renderInput('indexNumber', 'Index')}
+					{this.renderInput('username', 'Username')}
 					{this.renderInput('password', 'Password', 'password')}
 					{this.renderSelect('gender', 'Gender', this.state.genders)}
 					{this.renderInput('name', 'Name')}
