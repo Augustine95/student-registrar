@@ -36,7 +36,7 @@ class Schools extends Component {
 
 	render() {
 		const { currentPage, pageSize, querySearch } = this.state;
-		const { onDelete, onSort, onStarClick, sortColumn } = this.props;
+		const { onDelete, onSort, onStarClick, sortColumn, user } = this.props;
 
 		const { filtered, schools } = this.getPagedData();
 
@@ -52,6 +52,7 @@ class Schools extends Component {
 					sortColumn={sortColumn}
 					schools={schools}
 					onStar={onStarClick}
+					user={user}
 				/>
 				<Pagination
 					currentPage={currentPage}

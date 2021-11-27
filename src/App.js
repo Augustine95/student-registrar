@@ -10,16 +10,19 @@ import InputScores from './components/inputScores';
 import Profile from './components/profile';
 import Logout from './components/logout';
 import { getSchools } from './services/fakeSchoolsService';
+import auth from './services/authService';
 import './App.css';
 
 class App extends Component {
 	state = {
+		user: '',
 		schools: [],
 		sortColumn: { path: 'title', order: 'asc' }
 	};
 
 	componentDidMount() {
-		this.setState({ schools: getSchools() });
+		const user = auth.getCurrentUser();
+		this.setState({ user, schools: getSchools() });
 	}
 
 	handleStarClick = (school) => {
@@ -38,11 +41,11 @@ class App extends Component {
 	handleSort = (sortColumn) => this.setState({ sortColumn });
 
 	render() {
-		const { schools, sortColumn } = this.state;
+		const { schools, sortColumn, user } = this.state;
 
 		return (
 			<React.Fragment className="App">
-				<NavBar />
+				<NavBar user={user} />
 				<main className="container">
 					<Switch>
 						<Route
@@ -72,6 +75,7 @@ class App extends Component {
 									onSort={this.handleSort}
 									onStarClick={this.handleStarClick}
 									sortColumn={sortColumn}
+									user={user}
 									{...props}
 								/>
 							)}

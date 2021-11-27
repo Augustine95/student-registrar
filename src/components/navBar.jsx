@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import auth from '../services/authService';
 
 class NavBar extends React.Component {
-	state = {};
-
-	componentDidMount() {
-		this.setState({ user: auth.getCurrentUser() });
-	}
-
 	render() {
-		const { user } = this.state;
+		const { user } = this.props;
 
 		return (
 			<React.Fragment className="navbar-container">
