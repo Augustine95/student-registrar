@@ -64,6 +64,7 @@ class App extends Component {
 						<Route path="/register" component={RegisterForm} />
 						<Route path="/logout" component={Logout} />
 						<Route path="/login" component={LoginForm} />
+						<Route path="/scores" component={InputScores} />
 						<Route path="/home" component={HomePage} />
 						<Route path="/students/:id" component={InputScores} />
 						<Route

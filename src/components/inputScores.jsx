@@ -17,6 +17,7 @@ export default class InputScores extends Form {
 
 	doSubmit() {
 		console.log('Submission Recieved');
+		this.props.history.push('/');
 	}
 
 	render() {
