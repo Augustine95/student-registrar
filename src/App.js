@@ -12,6 +12,7 @@ import Logout from './components/logout';
 import { getSchools } from './services/fakeSchoolsService';
 import auth from './services/authService';
 import './App.css';
+import ProtectedRoute from './components/common/protectedRoute';
 
 class App extends Component {
 	state = {
@@ -61,9 +62,9 @@ class App extends Component {
 								/>
 							)}
 						/>
-						<Route path="/register" component={RegisterForm} />
+						<ProtectedRoute path="/register" component={RegisterForm} />
 						<Route path="/logout" component={Logout} />
-						<Route path="/login" component={LoginForm} />
+						<ProtectedRoute path="/login" component={LoginForm} />
 						<Route path="/scores" component={InputScores} />
 						<Route path="/home" component={HomePage} />
 						<Route path="/students/:id" component={InputScores} />
