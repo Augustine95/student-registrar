@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 
 export default class profile extends Component {
 	componentDidMount() {
-		toast(`Hello! ${auth.getCurrentUser()}`);
+		toast(`Hello ${auth.getCurrentUser()}!`);
 	}
 
 	render() {
