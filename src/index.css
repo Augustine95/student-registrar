@@ -13,14 +13,16 @@ div,
 p {
 	font-size: 1.8rem;
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-weight: 300;
 }
 
 h1 {
 	word-spacing: 1.5rem;
 }
 
-p {
-	font-weight: 300;
+h1 {
+	font-weight: 700;
+	color: #000;
 }
 
 ol li {

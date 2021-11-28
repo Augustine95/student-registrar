@@ -6,7 +6,7 @@ export default class HomePage extends Component {
 	render() {
 		return (
 			<div className="login">
-				<h1>Student School Allocation</h1>
+				<h1 className="heading">Student School Allocation</h1>
 				<h2>Introduction</h2>
 				<p>
 					We are here to help you to get school of your dream. We'll give you a notification of the school you
