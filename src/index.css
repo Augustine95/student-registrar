@@ -4,9 +4,14 @@ body {
 }
 
 .App {
-	font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-		'Open Sans', 'Helvetica Neue', sans-serif;
+	/* font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+		'Open Sans', 'Helvetica Neue', sans-serif; */
 	font-size: 62.5%;
+}
+
+div {
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 }
 
 p {
@@ -15,22 +20,43 @@ p {
 }
 
 h1 {
-	margin-top: 3.5rem;
-	text-shadow: 2px 2px 0 #444;
 	word-spacing: 1.5rem;
 }
 
-.navbar-container {
+p {
+	font-weight: 300;
+}
+
+ol li {
+	font-weight: 400;
+}
+
+@media screen and (min-width: 501px) {
+	form {
+		width: 75%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	form {
+		width: 45%;
+	}
+}
+
+button {
+	outline: 0;
+}
+
+/* .navbar-container {
 	display: flex;
 	position: relative;
 	margin-bottom: 2rem;
-}
+} */
 
-.navbar {
-	/* flex-direction: row-reverse; */
+/* .navbar {
 	position: fixed;
 	top: 0;
-}
+} */
 
 .clickable {
 	cursor: pointer;
@@ -40,9 +66,10 @@ h1 {
 	background-color: pink;
 }
 
-.navbar-expand-lg {
+/* .navbar-expand-lg {
 	display: flex;
 }
+*/
 
 .nav-item {
 	margin: 0 .5rem;
@@ -67,28 +94,6 @@ h1 {
 
 .login h1 {
 	text-align: center;
-	font-size: 3.5rem;
-	/* margin-top: 1rem; */
-}
-
-.login h2 {
-	font-size: 2.9rem;
-}
-
-.login h3 {
-	font-size: 2.2rem;
-}
-
-.login h4 {
-	font-size: 2rem;
-}
-
-.login h5 {
-	font-size: 1.5rem;
-}
-
-.login h6 {
-	font-size: 1rem;
 }
 
 .login a:hover {
@@ -113,11 +118,7 @@ h1 {
 	filter: drop-shadow(16px 16px 20px #222);
 }
 
-.recommendations article {
-}
-
 section {
-	width: 50ch;
 	line-height: 1.5;
 }
 
@@ -125,6 +126,7 @@ section {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	width: 50ch;
 }
 
 .recommendations .tweet-handle {

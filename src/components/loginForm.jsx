@@ -33,7 +33,10 @@ class LoginForm extends Form {
 		return (
 			<div>
 				<h1>Login</h1>
-				<form className="w-50" onSubmit={this.handleSubmit}>
+				<form
+					// className="w-50"
+					onSubmit={this.handleSubmit}
+				>
 					{this.renderInput('indexNumber', 'Index')}
 					{this.renderInput('password', 'Password', 'password')}
 					{this.renderButton('Login')}

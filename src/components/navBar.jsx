@@ -46,7 +46,7 @@ class NavBar extends React.Component {
 										<i className="fa fa-sign-in" aria-hidden="true" /> Login
 									</NavLink>
 									<NavLink className="nav-item nav-link" to="/register">
-										Register
+										<i class="fa fa-users" aria-hidden="true" /> Register
 									</NavLink>
 								</React.Fragment>
 							)}
