@@ -9,6 +9,7 @@ import HomePage from './components/homePage';
 import InputScores from './components/inputScores';
 import Profile from './components/profile';
 import Logout from './components/logout';
+import NavigationBar from './components/navigationBar';
 import { getSchools } from './services/fakeSchoolsService';
 import ProtectedRoute from './components/common/protectedRoute';
 import auth from './services/authService';
@@ -46,7 +47,7 @@ class App extends Component {
 
 		return (
 			<React.Fragment className="App">
-				<NavBar user={user} />
+				<NavigationBar user={user} />
 				<main className="container">
 					<Switch>
 						<Route
