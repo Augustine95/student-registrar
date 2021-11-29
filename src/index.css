@@ -135,6 +135,7 @@ button {
 
 .recommendations img:hover {
 	filter: drop-shadow(16px 16px 20px #222);
+	transform: scale(1.5);
 }
 
 section {
