@@ -173,3 +173,21 @@ ol li {
 		display: block;
 	}
 }
+
+.card {
+	width: 18rem;
+	border-radius: 5px;
+	float: left;
+	margin: 0 1rem;
+	display: flex;
+}
+
+.card img {
+	object-fit: cover;
+}
+
+.card .cards {
+	justify-content: center;
+	background: tomato;
+	border: 1px solid orange;
+}
