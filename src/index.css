@@ -178,8 +178,10 @@ ol li {
 	width: 18rem;
 	border-radius: 5px;
 	float: left;
-	margin: 0 1rem;
+	margin: 1rem 1rem;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .card img {
@@ -190,4 +192,24 @@ ol li {
 	justify-content: center;
 	background: tomato;
 	border: 1px solid orange;
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile body {
+	justify-content: center;
+}
+
+.profile h1 {
+	justify-content: start;
+	align-content: flex-start;
+}
+
+.profile .cards:hover {
+	transform: scale(1.01);
 }

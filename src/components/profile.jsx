@@ -10,8 +10,12 @@ export default class profile extends Component {
 		return (
 			<div>
 				<h1>My Profile</h1>
-				<p className="stress">Hello {auth.getCurrentUser().name} !</p>
-				<div className="cards">{schools.map((school) => <Card key={school._id} label={school.title} />)}</div>
+				<div className="profile">
+					<p className="stress">Hello {auth.getCurrentUser().name} !</p>
+					<div className="cards">
+						{schools.map((school) => <Card key={school._id} label={school.title} />)}
+					</div>
+				</div>
 			</div>
 		);
 	}
