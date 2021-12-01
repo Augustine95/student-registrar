@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import me1 from './images/me1.png';
 import image1 from './images/image1.jpeg';
+import RecommendationCard from './recommendationCard';
 
 export default class HomePage extends Component {
 	render() {
 		return (
 			<div className="login">
-				<h1 className="heading">Student School Allocation</h1>
+				<h1 className="heading">Integrated Secondary School Selection System</h1>
 				<h2>Introduction</h2>
 				<p>
 					We are here to help you to get school of your dream. We'll give you a notification of the school you
@@ -18,18 +19,16 @@ export default class HomePage extends Component {
 				</p>
 				<h2>What others have to say.</h2>
 				<section className="recommendations">
-					<article>
-						<img src={me1} alt="An image of Augustine" />
-						<p className="tweet-handle">@awuoriaugustine</p>
-						<p className="tweet-content">
-							Student Selection Allocation application has helped me connect to the school of my dream
-						</p>
-					</article>
-					<article>
-						<img src={image1} alt="An image of tweeter lover" />
-						<p className="tweet-handle">@tweeterlover</p>
-						<p className="tweet-content">I've never met any better site that allocates better schools.</p>
-					</article>
+					<RecommendationCard
+						image={me1}
+						message="This website has connected me with the school of my dream."
+						tweeterHandle="awuoriaugustine"
+					/>
+					<RecommendationCard
+						image={image1}
+						message="I've never met any better site that allocates better schools."
+						tweeterHandle="tweeterlover"
+					/>
 				</section>
 				<h2>Help Centre</h2>
 				<section className="help-steps">
